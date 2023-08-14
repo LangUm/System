@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset = "utf-8">
+ <title>Test4you</title>
+ <!-- Подключение внешнего файла со стилями -->
+ <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+ <!-- Шапка сайта -->
+ <header class="main-header">
+  <h1>Тесты для 4 класса</h1>
+  <nav class="main-header-nav">
+   <img src="img/logo.svg" width="50" height="50" alt="Logo">
+   <ul class="site-navigation">
+   <li class="site-navigation-item">
+    <a href="#">Главная страница</a>
+   </li>
+   <li class="site-navigation-item">
+    <a href="#">Тест</a>
+   </li>
+   <li class="site-navigation-item">
+    <a href="#">Результат</a>
+   <li class="site-navigation-item">
+    <a href="#">Контакты</a>
+   </li>
+   <li class="site-navigation-item">
+    <a href="#">Профиль</a>
+   </li>
+  </ul>
+  </nav>
+ </header>
+
+ <main>
+  <!-- Основное содержимое страницы -->
+  <section class="about">
+  <h2>О сайте</h2>
+  <img src="img/pupils.png" width="636" height="147" alt="Ученики в школе">
+  <p>Посетив наш сайт, Вы сможете пройти онлайн-тесты по разным предметам и получить мгновенный результат. Наша онлайн-система обеспечивает дистанционное образование учеников, обучающихся в 4 классах</p>
+  </section>
+
+  <section class="login">
+   <div class="flex-box" style="margin-top: 35px">
+    <div style="width: 30%">
+     <div>
+      <label for="login">Логин</label>
+      <input class="text-field__input" type="text" id="login" placeholder="Login">
+      <label for="password">Пароль</label>
+      <input class="text-field__input" type="password" id="password" placeholder="Password">
+      <button class="login-button" onclick="alert('Вы вошли!')">Войти</button>
+      <br>
+      <a href="#">Забыли пароль?</a>    
+     </div>
+    </div>
+  </section>
+
+  <section class="tests">
+   <!-- Список доступных тестов -->
+   <h2>Список доступных тестов</h2>
+   <div class="tabs">
+    <ul class="tabs-tests-list">
+     <li class="tabs-tests-list-item">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1">Тест 1. История России</label>
+      <img src="img/history" width="132" height="116" alt="History">
+      <p>Небольшой тест на знание предмета "История России" из школьной программы. Время прохождения: 10 минут</p>
+     </li>
+     <li class="tabs-tests-list-item">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1">Тест 2. Английский язык: основы грамматики</label>
+      <img src="img/grammar.jpg width="132" height="116" alt="English Grammar">
+      <p>15-минутный тест позволит Вам узнать свой уровень владения знаниями грамматики в английском языке</p>
+     </li>
+     <li class="tabs-tests-list-item">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1">Тест 3. Искусство</label>
+      <img src="img/art.jpg" width="132" height="116" alt="Piece of art">
+      <p>Насколько хорошо Вы разбираетесь в объектах изобразительного искусства? Быстрый онлайн-тест в картинках поможет ответить на этот вопрос</p>
+     </li>
+    </ul>
+   </div>
+  </section>
+
+  <section id="content1">
+   <div class="flex-box">
+    <div style="width: 40%">
+     <img src="img/flag.jpg" width="80%">
+    </div>
+    <div class="slider">
+     <div style="width: 60%">
+      <input type="radio" name="switch" id="btn1" checked>
+      <input type="radio" name="switch" id="btn2">
+      <input type="radio" name="switch" id="btn3">
+     </div>
+     <div class="switch">
+      <label for="btn1"></label>
+      <label for="btn2"></label>
+      <label for="btn3"></label>
+     </div>
+     <div class="slider-inner">
+      <div class="slides">
+       <img src="img/club.jpg"/>
+       <img src="img/movies.jpg"/>
+       <img src="img/serial.jpg"/>
+      </div>
+     </div>
+    </section>  
+
+  <section class="results" id="content2">
+   <h2>Результаты теста</h2>
+   <!-- Результат пользователя за каждый тест -->
+   <ul class="results-list">
+    <li class="results-list-item">
+     <input id="tab1" type="radio" name="tabs" checked>
+     <label for="tab1">Тест 1. История России</label>
+    </li>
+    <li class="results-list-item">
+     <input id="tab1" type="radio" name="tabs" checked>
+     <label for="tab1">Тест 2. Английский язык. Грамматика</label>
+    </li>
+    <li class="results-list-item">
+     <input id="tab1" type="radio" name="tabs" checked>
+     <label for="tab1">Тест 3. Искусство</label>
+    </li>
+   </ul>
+  </section>
+
+  <!-- Отображение выбранного теста -->
+  <section class="test" id="content1">
+  <h3>Название теста</h3>
+   <p>Описание теста</p>
+
+   <!-- Форма для прохождения теста -->
+   <form action="#" method="POST">
+    <!-- Вопрос 1 -->
+    <div class="question">
+     <p>Текст вопроса</p>
+     <!-- Варианты ответа -->
+     <div class="answers">
+      <input type="radio" name="answer1" value="1" id="answer1-1">
+      <label for="answer1-1">Вариант ответа 1</label><br>
+
+      <input type="radio" name="answer1" value="2" id="answer1-2">
+      <label for="answer1-2">Вариант ответа 2</label><br>
+
+      <input type="radio" name="answer1" value="3" id="answer1-3">
+      <label for="answer1-3">Вариант ответа 3</label><br>
+     </div>
+    </div>
+
+    <!-- Вопрос 2 -->
+    <div class="question">
+     <p>Текст вопроса</p>
+     <!-- Варианты ответа -->
+      <div class="answers">
+       <input type="checkbox" name="answer2[]" value="1" id="answer2-1">
+       <label for="answer2-1">Вариант ответа 1</label><br>
+
+       <input type="checkbox" name="answer2[]" value="2" id="answer2-2">
+       <label for="answer2-2">Вариант ответа 2</label><br>
+
+       <input type="checkbox" name="answer2[]" value="3" id="answer2-3">
+       <label for="answer2-3">Вариант ответа 3</label><br>
+      </div>
+     </div>
+
+     <!-- Кнопки управления -->
+     <div class="control-buttons">
+      <button type="button">Назад</button>
+      <button type="submit">Далее</button>
+     </div>
+   </form>
+
+   <!-- Оставшееся время для прохождения теста -->
+   <div class="timer">
+    <p>Осталось времени: 10 минут</p>
+   </div>
+ </section>
+</main>
+
+<footer class="main-footer">
+  <!-- Подвал сайта -->
+  <p class="footer-title">Тесты для тебя</p>
+  <img src="img/logo.svg" width="50" height="50" alt="Logo">
+  <ul class="footer-navigation">
+    <li class="footer-navigation-item">
+     <a href="#">Главная страница</a>
+    </li>
+    <li class="footer-navigation-item">
+     <a href="#">Тест</a>
+    </li>
+    <li class="footer-navigation-item">
+     <a href="#">Результат</a>
+    <li class="footer-navigation-item">
+     <a href="#">Контакты</a>
+    </li>
+    <li class="footer-navigation-item">
+     <a href="#">Профиль</a>
+    </li>
+   </ul>
+   <ul class="social-list">
+    <li class="social-list-item">
+     <a href="#"><img src="img/mail.svg" width="41" height="41" alt="Mail.ru"></a>
+    </li>
+    <li class="social-list-item">
+     <a href="#"><img src="img/telegram.svg" width="44" height="41" alt="Telegram"></a>
+  </footer>
+ </body>
+</html>
